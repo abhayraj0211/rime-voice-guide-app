@@ -79,15 +79,14 @@ under the mic ("Rime mistv2 · luna" vs "Browser TTS (Rime fallback)").
 ## Third-party services
 
 - **Rime** — text to speech (primary, required).
-- **Lovable AI Gateway** — reasoning model (`google/gemini-3.8-flash`) that turns the screen
+- **AI Gateway** — reasoning model (`google/gemini-3.8-flash`) that turns the screen
   summary plus the question into a short spoken answer.
 - **Browser Web Speech API** — speech recognition and the fallback TTS.
 
 ## Setup
 
 1. Add `RIME_API_KEY` as a project secret (it is read server-side only, never committed).
-2. `LOVABLE_API_KEY` is provided by the platform for the AI Gateway.
-3. Install and run:
+2. Install and run:
 
 ```bash
 bun install
@@ -116,5 +115,5 @@ Open the app, allow microphone access, and tap the mic (or double tap anywhere, 
 
 ## Configuration hygiene
 
-No API keys live in this repository. `RIME_API_KEY` and `LOVABLE_API_KEY` are read from the server
+No API keys live in this repository. `RIME_API_KEY` are read from the server
 environment inside request handlers only.
